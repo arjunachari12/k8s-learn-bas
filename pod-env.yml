@@ -3,18 +3,13 @@ kind: Pod
 metadata:
   name: envar-demo
   labels:
-    name: demonstrate-envars
+    purpose: demonstrate-envars
 spec:
   containers:
   - name: envar-demo-container
     image: gcr.io/google-samples/node-hello:1.0
-    resources:
-      limits:
-        memory: "128Mi"
-        cpu: "500m"
     env:
-      - name: DEMO_GREETING
-        vale: "Hell from arjun"
-      - name: DEMO_FAREWELL
-        value: "good bye arjun"
-    
+    - name: DEMO_GREETING
+      value: "Hello from the environment"
+    - name: DEMO_FAREWELL
+      value: "Such a sweet sorrow"
