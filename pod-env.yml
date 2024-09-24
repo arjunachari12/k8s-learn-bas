@@ -7,9 +7,10 @@ metadata:
 spec:
   containers:
   - name: envar-demo-container
-    image: gcr.io/google-samples/hello-app:2.0
+    image: alpine
     env:
     - name: DEMO_GREETING
       value: "Hello from the environment"
     - name: DEMO_FAREWELL
-      value: "Such a sweet sorrow"
+      value: "Such a sweet sorrow" 
+    command: ["sh", "-c", "sleep 3600"] 
